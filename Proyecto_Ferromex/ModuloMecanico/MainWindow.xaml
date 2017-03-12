@@ -6,38 +6,41 @@
         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         mc:Ignorable="d"
 
-        Title="Registro-Mecanico" Height="693.7" Width="863" WindowState="Normal" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" >
+        Title="Registro-Mecanico" Height="581.2" Width="1065.5" WindowState="Normal" WindowStyle="ToolWindow" WindowStartupLocation="CenterScreen" >
     <Grid x:Name="fo" Background="#FF22226C" Margin="0,0,2,1">
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="200"/>
+            <ColumnDefinition Width="21.5"/>
+            <ColumnDefinition Width="178"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
             <ColumnDefinition Width="auto"/>
-            <ColumnDefinition Width="468*"/>
-            <ColumnDefinition Width="143*"/>
-            <ColumnDefinition Width="12*"/>
+            <ColumnDefinition Width="306*"/>
+            <ColumnDefinition Width="155*"/>
+            <ColumnDefinition Width="219*"/>
+            <ColumnDefinition Width="151*"/>
+            <ColumnDefinition Width="15*"/>
         </Grid.ColumnDefinitions>
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="123" ></RowDefinition>
-            <RowDefinition Height="112"/>
-            <RowDefinition Height="258" />
+            <RowDefinition Height="124" ></RowDefinition>
+            <RowDefinition Height="169"/>
+            <RowDefinition Height="252" />
             <RowDefinition Height="154"/>
 
 
         </Grid.RowDefinitions>
-        <Label x:Name="LBL_Titulo" Content="Datos-Mecánico" Grid.Column="4" Margin="48,38,0,0" Width="181" Foreground="OldLace" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37"/>
-        <Label x:Name="LBL_Nombre" Content="NOMBRE(s): " HorizontalAlignment="Right" Height="31" Margin="0,2,18,0" VerticalAlignment="Top" Width="89" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1"/>
-        <Label x:Name="LBL_App" Content="APELLIDO PATERNO: " HorizontalAlignment="Right" Height="31" Margin="0,33,18,0" VerticalAlignment="Top" Width="142" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1"/>
-        <Label x:Name="LBL_Apm" Content="APELLIDO MATERNO: " HorizontalAlignment="Right" Height="31" Margin="0,64,18,0" VerticalAlignment="Top" Width="142" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1"/>
+        <Label x:Name="LBL_Titulo" Content="Datos-Mecánico" Grid.Column="4" Margin="239,44,0,0" Width="181" Foreground="OldLace" FontSize="20" HorizontalAlignment="Left" VerticalAlignment="Top" Height="37" Grid.ColumnSpan="3"/>
+        <Label x:Name="LBL_Nombre" Content="NOMBRE(s): " HorizontalAlignment="Right" Height="31" Margin="0,2,18,0" VerticalAlignment="Top" Width="89" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="LBL_App" Content="APELLIDO PATERNO: " HorizontalAlignment="Right" Height="31" Margin="0,33,18,0" VerticalAlignment="Top" Width="142" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1" Grid.Column="1"/>
+        <Label x:Name="LBL_Apm" Content="APELLIDO MATERNO: " HorizontalAlignment="Right" Height="31" Margin="0,64,18,0" VerticalAlignment="Top" Width="142" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1" Grid.Column="1"/>
 
 
-        <TextBox x:Name="TXT_App" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese apellido paterno" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="24,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" Cursor="IBeam" Grid.Row="1" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TXT_Apm" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese apellido materno" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="24,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="349" Cursor="IBeam" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TXT_App" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese apellido paterno" Grid.Column="4" HorizontalAlignment="Left" Height="26" Margin="16,33,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Cursor="IBeam" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TXT_Apm" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese apellido materno" Grid.Column="4" HorizontalAlignment="Left" Height="26" Margin="16,64,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="264" Cursor="IBeam" Grid.Row="1" Grid.ColumnSpan="2"/>
 
 
-        <GroupBox x:Name="groupBox" Header="Direccion" HorizontalAlignment="Left" Height="200" Margin="93,21,0,0" Grid.Row="2" VerticalAlignment="Top" Width="480" Foreground="LimeGreen" Grid.ColumnSpan="5">
+        <GroupBox x:Name="groupBox" Header="Direccion" HorizontalAlignment="Left" Height="200" Margin="0,109,0,0" Grid.Row="1" VerticalAlignment="Top" Width="478" Foreground="LimeGreen" Grid.ColumnSpan="5" Grid.Column="1" Grid.RowSpan="2">
             <Grid HorizontalAlignment="Left" Height="168" Margin="0,4,0,0" VerticalAlignment="Top" Width="464">
                 <Label x:Name="LBL_Ciudad" Content="CIUDAD: " HorizontalAlignment="Right" Height="31" Margin="0,18,354,0" VerticalAlignment="Top" Width="89" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" RenderTransformOrigin="0.742,0.774"/>
                 <Label x:Name="LBL_Calle" Content="CALLE: " HorizontalAlignment="Right" Height="31" Margin="0,46,354,0" VerticalAlignment="Top" Width="89" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" RenderTransformOrigin="0.742,0.774"/>
@@ -55,17 +58,42 @@
 
             </Grid>
         </GroupBox>
-        <Label x:Name="LBL_Curp" Content="CURP: " HorizontalAlignment="Right" Height="31" Margin="0,10,62,0" VerticalAlignment="Top" Width="89" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="3" RenderTransformOrigin="0.186,0.645"/>
-        <Label x:Name="LBL_RFC" Content="RFC: " HorizontalAlignment="Right" Height="31" Margin="0,41,62,0" VerticalAlignment="Top" Width="89" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="3" RenderTransformOrigin="0.186,0.645"/>
-        <Label x:Name="LBL_FNacimiento" Content="FECHA-NACIMIENTO: " HorizontalAlignment="Right" Height="31" Margin="0,72,10,0" VerticalAlignment="Top" Width="141" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="3"/>
-        <Label x:Name="LBL_Telefono" Content="TELEFONO: " HorizontalAlignment="Right" Height="31" Margin="0,103,62,0" VerticalAlignment="Top" Width="89" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="3"/>
-
-        <TextBox x:Name="TXT_Curp" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese la Curp" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306" Cursor="IBeam" Grid.Row="3" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TXT_Rfc" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese RFC" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="10,41,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306" Cursor="IBeam" Grid.Row="3" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TXT_FNacim" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese fecha de nacimiento " Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="10,72,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306" Cursor="IBeam" Grid.Row="3" Grid.ColumnSpan="2"/>
-        <TextBox x:Name="TXT_Telef" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese telefono" Grid.Column="3" HorizontalAlignment="Left" Height="26" Margin="10,103,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="306" Cursor="IBeam" Grid.Row="3" Grid.ColumnSpan="2"/>
-        <Button x:Name="button" Content="Button" Grid.Column="5" HorizontalAlignment="Left" Height="43" Margin="11,0,0,0" Grid.Row="1" VerticalAlignment="Top" Width="128" Click="button_Click_1"/>
-        <TextBox x:Name="TXT_Nombre" Grid.Column="4" HorizontalAlignment="Left" Height="26" Margin="24,4,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="349" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese nombre o nombres del mecánico"/>
+        <TextBox x:Name="TXT_Nombre" Grid.Column="4" HorizontalAlignment="Left" Height="26" Margin="16,2,0,0" Grid.Row="1" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="264" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese nombre o nombres del mecánico" Grid.ColumnSpan="2"/>
+        <Label x:Name="LBL_Curp" Content="CURP: " HorizontalAlignment="Right" Height="31" Margin="0,9,47,0" VerticalAlignment="Top" Width="90" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1" RenderTransformOrigin="0.186,0.645" Grid.Column="6"/>
+        <Label x:Name="LBL_RFC" Content="RFC: " HorizontalAlignment="Right" Height="31" Margin="0,40,47,0" VerticalAlignment="Top" Width="90" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1" RenderTransformOrigin="0.186,0.645" Grid.Column="6"/>
+        <Label x:Name="LBL_FNacimiento" Content="FECHA-NACIMIENTO: " HorizontalAlignment="Right" Height="31" Margin="0,71,217,0" VerticalAlignment="Top" Width="142" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1" Grid.Column="6" Grid.ColumnSpan="2"/>
+        <Label x:Name="LBL_Telefono" Content="TELEFONO: " HorizontalAlignment="Right" Height="31" Margin="0,102,47,0" VerticalAlignment="Top" Width="90" Cursor="No" FontFamily="Arial" FontWeight="Bold" Foreground="Beige" Grid.Row="1" Grid.Column="6"/>
+        <TextBox x:Name="TXT_Curp" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese la Curp" Grid.Column="7" HorizontalAlignment="Left" Height="26" Margin="10,9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" Cursor="IBeam" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TXT_Rfc" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese RFC" Grid.Column="7" HorizontalAlignment="Left" Height="26" Margin="10,40,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" Cursor="IBeam" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TXT_FNacim" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese fecha de nacimiento " Grid.Column="7" HorizontalAlignment="Left" Height="26" Margin="10,71,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" Cursor="IBeam" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <TextBox x:Name="TXT_Telef" Controls:TextBoxHelper.ClearTextButton="True" Controls:TextBoxHelper.Watermark="Ingrese telefono" Grid.Column="7" HorizontalAlignment="Left" Height="26" Margin="10,102,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="246" Cursor="IBeam" Grid.Row="1" Grid.ColumnSpan="2"/>
+        <Menu x:Name="menu" Height="54" Margin="80,173,0,0" Grid.Row="2" VerticalAlignment="Top" Grid.Column="4" Grid.ColumnSpan="4" ClipToBounds="True" Cursor="Hand" HorizontalAlignment="Left" Width="532">
+            <Button Height="45" Width="96" Click="Button_Click" x:Name="BTN_add" Foreground="#FF321010" BorderBrush="#FF321010" OpacityMask="#FF321010" ClipToBounds="True" Cursor="Hand">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Proyecto_Ferromex;component/img/new2.ico" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="0,0,0,-1" Width="90" Content="" Click="Button_Click_2" x:Name="BTN_save">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Proyecto_Ferromex;component/img/save.ico" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="0,0,0,-1" Width="90" Click="Button_Click_3" x:Name="BTN_refresh">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Proyecto_Ferromex;component/img/refresh.ico" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="0,0,0,-1" Width="94" x:Name="BTN_delete" Click="BTN_delete_Click">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Proyecto_Ferromex;component/img/delete.ico" Stretch="Uniform"/>
+                </Button.Background>
+            </Button>
+            <Button Margin="0,0,0,-1" Width="80" Click="Button_Click_4" x:Name="BTN_search">
+                <Button.Background>
+                    <ImageBrush ImageSource="/Proyecto_Ferromex;component/img/search2.ico"/>
+                </Button.Background>
+            </Button>
+        </Menu>
 
 
     </Grid>

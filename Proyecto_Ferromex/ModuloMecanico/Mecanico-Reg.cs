@@ -11,6 +11,8 @@ namespace Proyecto_Ferromex.ModuloMecanico
 {
     class Mecanico_Reg
     {
+
+            //REGISTRAR MECANICO
             public static int InvocarSP(Mecanico pMecanico)
             {
                 using (MySqlCommand cmd = new MySqlCommand())
@@ -55,5 +57,45 @@ namespace Proyecto_Ferromex.ModuloMecanico
                 } // end using
 
             } // end GuardarHuella
+
+
+
+
+
+
+        public static List<Mecanico> Buscar(Mecanico pMecanico)
+        {
+            List<Mecanico> _lista = new List<Mecanico>();
+
+            MySqlCommand _comando = new MySqlCommand(String.Format(
+           "SELECT * FROM mecanicos where nombre ='{0}' or app='{1}' or apm='{2}'", pMecanico.nombre, pMecanico.app,pMecanico.apm), BDConexion.ObtenerConexion());
+            MySqlDataReader _reader = _comando.ExecuteReader();
+            while (_reader.Read())
+            {
+                Mecanico p2Mecanico = new Mecanico();
+                p2Mecanico.id = _reader.GetInt32(0);
+                p2Mecanico.nombre = _reader.GetString(1);
+                p2Mecanico.app = _reader.GetString(2);
+                p2Mecanico.apm = _reader.GetString(3);
+                p2Mecanico.ciudad = _reader.GetString(4);
+                p2Mecanico.calle = _reader.GetString(5);
+                p2Mecanico.numero = _reader.GetInt32(6);
+                p2Mecanico.colonia = _reader.GetString(7);
+                p2Mecanico.cp = _reader.GetInt32(8);
+                p2Mecanico.curp = _reader.GetString(9);
+                p2Mecanico.rfc = _reader.GetString(10);
+                p2Mecanico.fecha = _reader.GetString(11);
+                p2Mecanico.telefono = _reader.GetString(12);
+
+
+
+                //p2Mecanico.Direccion = _reader.GetString(4);
+
+
+                _lista.Add(p2Mecanico);
+            }
+
+            return _lista;
+        }
     }
 }

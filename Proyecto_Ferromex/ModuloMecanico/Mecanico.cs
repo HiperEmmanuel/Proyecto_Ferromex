@@ -8,6 +8,7 @@ namespace Proyecto_Ferromex.ModuloMecanico
 {
     class Mecanico
     {
+        public int id { get; set;}
         public string nombre { get; set; }
         public string app { get; set; }
         public string apm { get; set; }
