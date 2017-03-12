@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Proyecto_Ferromex.ModuloMecanico
 {
-    class Mecanico
+    public class Mecanico
     {
         public int id { get; set;}
         public string nombre { get; set; }

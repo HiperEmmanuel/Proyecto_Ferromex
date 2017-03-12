@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -36,8 +37,26 @@ namespace Proyecto_Ferromex.ModuloMecanico
         }
 
 
+        public Mecanico MecSelect { get; set; }
+        private void BTN_Aceptar_Click(object sender, RoutedEventArgs e)
+        {
+            if (DTG_MecBusq.SelectedItems.Count == 1)
+            {
+
+                Mecanico mecanico = DTG_MecBusq.SelectedItem as Mecanico;
+                int id = Convert.ToInt32(mecanico.id);
+                MecSelect = Mecanico_Reg.ObtenerMecanico(id);
+                this.Close();
 
 
+            }
+            else
+                MessageBox.Show("debe de seleccionar una fila");
+        }
 
+        private void BTN_Cancelar_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
